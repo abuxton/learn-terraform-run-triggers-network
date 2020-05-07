@@ -1,3 +1,13 @@
+terraform {
+  backend "remote" {
+    organization = "abc-hashi-training"
+
+    workspaces {
+      name = "learn-terraform-run-triggers-network"
+    }
+  }
+}
+
 provider "aws" {
   version = "~> 2.7"
   region  = var.aws_region
